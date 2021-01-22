@@ -1,0 +1,24 @@
+/Users/phongnd/Projects/LuxuryWatchs/Bus/bin/Debug/netcoreapp3.1/Bus.deps.json
+/Users/phongnd/Projects/LuxuryWatchs/Bus/bin/Debug/netcoreapp3.1/Bus.dll
+/Users/phongnd/Projects/LuxuryWatchs/Bus/bin/Debug/netcoreapp3.1/Bus.pdb
+/Users/phongnd/Projects/LuxuryWatchs/Bus/obj/Debug/netcoreapp3.1/Bus.csprojAssemblyReference.cache
+/Users/phongnd/Projects/LuxuryWatchs/Bus/obj/Debug/netcoreapp3.1/Bus.AssemblyInfoInputs.cache
+/Users/phongnd/Projects/LuxuryWatchs/Bus/obj/Debug/netcoreapp3.1/Bus.AssemblyInfo.cs
+/Users/phongnd/Projects/LuxuryWatchs/Bus/obj/Debug/netcoreapp3.1/Bus.csproj.CoreCompileInputs.cache
+/Users/phongnd/Projects/LuxuryWatchs/Bus/obj/Debug/netcoreapp3.1/Bus.dll
+/Users/phongnd/Projects/LuxuryWatchs/Bus/obj/Debug/netcoreapp3.1/Bus.pdb
+/Users/phongnd/Projects/LuxuryWatchs/Bus/bin/Debug/netcoreapp3.1/Dao.dll
+/Users/phongnd/Projects/LuxuryWatchs/Bus/bin/Debug/netcoreapp3.1/Dao.pdb
+/Users/phongnd/Projects/LuxuryWatchs/Bus/obj/Debug/netcoreapp3.1/Bus.csproj.CopyComplete
+C:\Users\ngohu\OneDrive\Desktop\Clone-Git\ASP.Net 11-1\LuxuryWatchs\Bus\obj\Debug\netcoreapp3.1\Bus.csprojAssemblyReference.cache
+C:\Users\ngohu\OneDrive\Desktop\Clone-Git\ASP.Net 11-1\LuxuryWatchs\Bus\obj\Debug\netcoreapp3.1\Bus.AssemblyInfoInputs.cache
+C:\Users\ngohu\OneDrive\Desktop\Clone-Git\ASP.Net 11-1\LuxuryWatchs\Bus\obj\Debug\netcoreapp3.1\Bus.AssemblyInfo.cs
+C:\Users\ngohu\OneDrive\Desktop\Clone-Git\ASP.Net 11-1\LuxuryWatchs\Bus\obj\Debug\netcoreapp3.1\Bus.csproj.CoreCompileInputs.cache
+C:\Users\ngohu\OneDrive\Desktop\Clone-Git\ASP.Net 11-1\LuxuryWatchs\Bus\bin\Debug\netcoreapp3.1\Bus.deps.json
+C:\Users\ngohu\OneDrive\Desktop\Clone-Git\ASP.Net 11-1\LuxuryWatchs\Bus\bin\Debug\netcoreapp3.1\Bus.dll
+C:\Users\ngohu\OneDrive\Desktop\Clone-Git\ASP.Net 11-1\LuxuryWatchs\Bus\bin\Debug\netcoreapp3.1\Bus.pdb
+C:\Users\ngohu\OneDrive\Desktop\Clone-Git\ASP.Net 11-1\LuxuryWatchs\Bus\bin\Debug\netcoreapp3.1\Dao.dll
+C:\Users\ngohu\OneDrive\Desktop\Clone-Git\ASP.Net 11-1\LuxuryWatchs\Bus\bin\Debug\netcoreapp3.1\Dao.pdb
+C:\Users\ngohu\OneDrive\Desktop\Clone-Git\ASP.Net 11-1\LuxuryWatchs\Bus\obj\Debug\netcoreapp3.1\Bus.csproj.CopyComplete
+C:\Users\ngohu\OneDrive\Desktop\Clone-Git\ASP.Net 11-1\LuxuryWatchs\Bus\obj\Debug\netcoreapp3.1\Bus.dll
+C:\Users\ngohu\OneDrive\Desktop\Clone-Git\ASP.Net 11-1\LuxuryWatchs\Bus\obj\Debug\netcoreapp3.1\Bus.pdb

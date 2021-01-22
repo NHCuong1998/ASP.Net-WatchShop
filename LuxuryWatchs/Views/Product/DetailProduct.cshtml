@@ -1,0 +1,305 @@
+﻿@model Dao.Models.CartModel
+@{
+    ViewData["Title"] = "Detail Product Page";
+    var userID = "";
+
+    if (ViewBag.Users != null)
+    {
+        @foreach (var item in ViewBag.Users)
+        {
+            userID = item.UserID;
+        }
+
+    }
+}
+
+@if (ViewBag.Users != null)
+{
+    @foreach (var item in ViewBag.Users)
+    {
+        <input type="hidden" asp-for="UserID" value="@item.UserID" />
+    }
+
+}
+
+<script>$(document).ready(function () { $(".memenu").memenu(); });</script>
+<!--dropdown-->
+<script src="js/jquery.easydropdown.js"></script>
+<script type="text/javascript">
+    $(function () {
+
+        var menu_ul = $('.menu_drop > li > ul'),
+            menu_a = $('.menu_drop > li > a');
+
+        menu_ul.hide();
+
+        menu_a.click(function (e) {
+            e.preventDefault();
+            if (!$(this).hasClass('active')) {
+                menu_a.removeClass('active');
+                menu_ul.filter(':visible').slideUp('normal');
+                $(this).addClass('active').next().stop(true, true).slideDown('normal');
+            } else {
+                $(this).removeClass('active');
+                $(this).next().stop(true, true).slideUp('normal');
+            }
+        });
+
+    });
+</script>
+
+
+<!--start-breadcrumbs-->
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="breadcrumbs-main">
+            <ol class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li class="active">Single</li>
+            </ol>
+        </div>
+    </div>
+</div>
+<!--end-breadcrumbs-->
+<!--start-single-->
+<div class="single contact">
+    <div class="container">
+        <div class="single-main">
+            <div class="col-md-9 single-main-left">
+                <div class="sngl-top">
+                    <div class="col-md-5 single-top-left">
+                        <div class="flexslider">
+                            <ul class="slides">
+                                <li data-thumb="images/s-1.jpg">
+                                    <div class="thumb-image">
+                                        @foreach (var item in ViewBag.Products)
+                                        {
+                                            <img src="~/libClient/images/@item.ProductImage" data-imagezoom="true" class="img-responsive" alt="" />
+                                        }
+                                    </div>
+                                </li>
+                                <li data-thumb="images/s-2.jpg">
+                                    <div class="thumb-image"> <img src="~/libClient/images/s-2.jpg" data-imagezoom="true" class="img-responsive" alt="" /> </div>
+                                </li>
+                                <li data-thumb="images/s-3.jpg">
+                                    <div class="thumb-image"> <img src="~/libClient/images/s-3.jpg" data-imagezoom="true" class="img-responsive" alt="" /> </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- FlexSlider -->
+                        <script src="~/libClient/js/imagezoom.js"></script>
+                        <script defer src="~/libClient/js/jquery.flexslider.js"></script>
+                        <link rel="stylesheet" href="~/libClient/css/flexslider.css" type="text/css" media="screen" />
+
+                        <script>
+                            // Can also be used with $(document).ready()
+                            $(window).load(function () {
+                                $('.flexslider').flexslider({
+                                    animation: "slide",
+                                    controlNav: "thumbnails"
+                                });
+                            });
+                        </script>
+                    </div>
+                    <div class="col-md-7 single-top-right">
+                        <div class="single-para simpleCart_shelfItem">
+                            <form asp-route-UserID="@userID" asp-controller="Cart" asp-action="Create">
+                                @foreach (var item in ViewBag.Products)
+                                {
+                                    <h2>@item.ProductName</h2>
+                                    <div class="star-on">
+                                        <ul class="star-footer">
+                                            <li><a href="#"><i> </i></a></li>
+                                            <li><a href="#"><i> </i></a></li>
+                                            <li><a href="#"><i> </i></a></li>
+                                            <li><a href="#"><i> </i></a></li>
+                                            <li><a href="#"><i> </i></a></li>
+                                        </ul>
+                                        <div class="review">
+                                            <a href="#"> 1 customer review </a>
+
+                                        </div>
+                                        <div class="clearfix"> </div>
+                                    </div>
+                                    <h5 class="item_price">$ @item.Price</h5>
+                                }
+
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                                <div class="available">
+                                    <ul>
+                                        <li>
+                                            Color
+                                            <select>
+                                                <option>Silver</option>
+                                                <option>Black</option>
+                                                <option>Dark Black</option>
+                                                <option>Red</option>
+                                            </select>
+                                        </li>
+                                        <li class="size-in">
+                                            Size<select>
+                                                <option>Large</option>
+                                                <option>Medium</option>
+                                                <option>small</option>
+                                                <option>Large</option>
+                                                <option>small</option>
+                                            </select>
+                                        </li>
+                                        <div class="clearfix"> </div>
+                                    </ul>
+                                </div>
+                                <ul class="tag-men">
+                                    <li>
+                                        <span>TAG: </span>
+                                        @foreach (var item in ViewBag.ProductType)
+                                        {
+                                            <span>@item.TypeName</span>
+                                        }
+                                    </li>
+
+                                    <li>
+                                        <span>CaseSize: </span>
+                                        @foreach (var item in ViewBag.Products)
+                                        {
+                                            <span>@item.CaseSize</span>
+                                        }
+                                    </li>
+                                    <li>
+                                        <span>CaseMaterial:</span>
+                                        @foreach (var item in ViewBag.Products)
+                                        {
+                                            <span>@item.CaseMaterial</span>
+                                        }
+                                    </li>
+                                    <li>
+                                        <span>Crystal: </span>
+                                        @foreach (var item in ViewBag.Products)
+                                        {
+                                            <span>@item.Gender</span>
+                                        }
+                                    </li>
+                                </ul>
+
+                                @foreach (var item in ViewBag.Products)
+                                {
+                                    <input type="hidden" asp-for="ProductID" value="@item.Id" />
+                                    <input type="hidden" asp-for="Total" value="@item.Price" />
+                                    @*<input type="hidden" asp-for="UserID" value="cuong" />*@
+                                }
+                                @*<a asp-area="" asp-controller="User" asp-action="Register" class="add-cart item_add">ADD TO CART</a>*@
+
+                                <input type="submit" value="ADD TO CART" class="btn btn-primary" />
+                            </form>
+                        </div>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="tabs">
+                    <ul class="menu_drop">
+                        <li class="item1">
+                            <a href="#"><img src="images/arrow.png" alt="">Description</a>
+                            <ul>
+                                <li class="subitem1"><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</a></li>
+                                <li class="subitem2"><a href="#"> Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore</a></li>
+                                <li class="subitem3"><a href="#">Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes </a></li>
+                            </ul>
+                        </li>
+                        <li class="item2">
+                            <a href="#"><img src="images/arrow.png" alt="">Additional information</a>
+                            <ul>
+                                <li class="subitem2"><a href="#"> Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore</a></li>
+                                <li class="subitem3"><a href="#">Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes </a></li>
+                            </ul>
+                        </li>
+                        <li class="item3">
+                            <a href="#"><img src="images/arrow.png" alt="">Reviews (10)</a>
+                            <ul>
+                                <li class="subitem1"><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</a></li>
+                                <li class="subitem2"><a href="#"> Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore</a></li>
+                                <li class="subitem3"><a href="#">Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes </a></li>
+                            </ul>
+                        </li>
+                        <li class="item4">
+                            <a href="#"><img src="images/arrow.png" alt="">Helpful Links</a>
+                            <ul>
+                                <li class="subitem2"><a href="#"> Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore</a></li>
+                                <li class="subitem3"><a href="#">Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes </a></li>
+                            </ul>
+                        </li>
+                        <li class="item5">
+                            <a href="#"><img src="images/arrow.png" alt="">Make A Gift</a>
+                            <ul>
+                                <li class="subitem1"><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</a></li>
+                                <li class="subitem2"><a href="#"> Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore</a></li>
+                                <li class="subitem3"><a href="#">Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes </a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3 single-right">
+                <div class="w_sidebar">
+                    <section class="sky-form">
+                        <h4>Catogories</h4>
+                        <div class="row1 scroll-pane">
+                            <div class="col col-4">
+                                <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>All Accessories</label>
+                            </div>
+                            <div class="col col-4">
+                                <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Women Watches</label>
+                                <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Kids Watches</label>
+                                <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Men Watches</label>
+                            </div>
+                            <div class="latestproducts">
+                                <div class="product-one">
+                                    <div class="col-md-4 product-left p-left">
+                                        <div class="product-main simpleCart_shelfItem">
+                                            <a href="single.html" class="mask"><img class="img-responsive zoom-img" src="images/p-1.png" alt="" /></a>
+                                            <div class="product-bottom">
+                                                <h3>Smart Watches</h3>
+                                                <p>Explore Now</p>
+                                                <h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">$ 329</span></h4>
+                                            </div>
+                                            <div class="srch">
+                                                <span>-50%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 product-left p-left">
+                                        <div class="product-main simpleCart_shelfItem">
+                                            <a href="single.html" class="mask"><img class="img-responsive zoom-img" src="images/p-2.png" alt="" /></a>
+                                            <div class="product-bottom">
+                                                <h3>Smart Watches</h3>
+                                                <p>Explore Now</p>
+                                                <h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">$ 329</span></h4>
+                                            </div>
+                                            <div class="srch">
+                                                <span>-50%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 product-left p-left">
+                                        <div class="product-main simpleCart_shelfItem">
+                                            <a href="single.html" class="mask"><img class="img-responsive zoom-img" src="images/p-3.png" alt="" /></a>
+                                            <div class="product-bottom">
+                                                <h3>Smart Watches</h3>
+                                                <p>Explore Now</p>
+                                                <h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">$ 329</span></h4>
+                                            </div>
+                                            <div class="srch">
+                                                <span>-50%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+<!--end-single-->

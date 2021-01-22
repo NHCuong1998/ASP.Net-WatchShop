@@ -1,0 +1,110 @@
+﻿
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <h1>Details</h1>
+    <div>
+        <h4>User</h4>
+        <hr />
+        @foreach (var item in ViewBag.Products)
+        {
+            <dl class="row">
+
+                <dt class="col-sm-2">
+                    Product ID
+                </dt>
+                <dd class="col-sm-10">
+                    @item.Id
+                </dd>
+                <dt class="col-sm-2">
+                    Product Code
+                </dt>
+                <dd class="col-sm-10">
+                    @item.ProductCode
+                </dd>
+                <dt class="col-sm-2">
+                    Model
+                </dt>
+                <dd class="col-sm-10">
+                    @item.Model
+                </dd>
+                <dt class="col-sm-2">
+                    ProductName
+                </dt>
+                <dd class="col-sm-10">
+                    @item.ProductName
+                </dd>
+                <dt class="col-sm-2">
+                    ProductTypeId
+                </dt>
+                <dd class="col-sm-10">
+                    @item.ProductTypeId
+                </dd>
+                <dt class="col-sm-2">
+                    CaseSize
+                </dt>
+                <dd class="col-sm-10">
+                    @item.CaseSize
+                </dd>
+                <dt class="col-sm-2">
+                    CaseMaterial
+                </dt>
+                <dd class="col-sm-10">
+                    @item.CaseMaterial
+                </dd>
+                <dt class="col-sm-2">
+                    Crystal
+                </dt>
+                <dd class="col-sm-10">
+                    @item.Crystal
+                </dd>
+                <dt class="col-sm-2">
+                    WaterResistance
+                </dt>
+                <dd class="col-sm-10">
+                    @item.WaterResistance
+                </dd>
+                <dt class="col-sm-2">
+                    Function
+                </dt>
+                <dd class="col-sm-10">
+                    @item.Function
+                </dd>
+                <dt class="col-sm-2">
+                    WatchMovement
+                </dt>
+                <dd class="col-sm-10">
+                    @item.WatchMovement
+                </dd>
+                <dt class="col-sm-2">
+                    Price
+                </dt>
+                <dd class="col-sm-10">
+                    @item.Price
+                </dd>
+                <dt class="col-sm-2">
+                    Quantity
+                </dt>
+                <dd class="col-sm-10">
+                    @item.Quantity
+                </dd>
+                <dt class="col-sm-2">
+                    About
+                </dt>
+                <dd class="col-sm-10">
+                    @item.About
+                </dd>
+            </dl>
+            <div>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Index">Back to List</a>
+            </div>
+        }
+
+    </div>
+</div>
+

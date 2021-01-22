@@ -1,0 +1,76 @@
+﻿@model Dao.Models.UserModel
+@{
+    ViewData["Title"] = "Register Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*css register
+    <link rel="stylesheet" href="~/libclient/fonts/material-icon/css/material-design-iconic-font.min.css">*@
+
+<!--start-breadcrumbs-->
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="breadcrumbs-main">
+            <ol class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li class="active">Register</li>
+            </ol>
+        </div>
+    </div>
+</div>
+<div class="register">
+    <div class="container">
+        <div class="register-top heading">
+            <h2>REGISTER</h2>
+        </div>
+        <div class="register-main">
+            <form asp-action="Create">
+                <div class="col-md-6 account-left">
+                    <div class="form-group">
+                        <input asp-for="UserID" placeholder="User name" type="text" tabindex="1" required>
+                        <span asp-validation-for="UserID" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input asp-for="FullName" placeholder="Full name" type="text" tabindex="2" required>
+                        <span asp-validation-for="FullName" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <input asp-for="Email" placeholder="Email address" type="text" tabindex="3" required>
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6 account-left">
+                    <div class="form-group">
+                        <input asp-for="Password" id="password" placeholder="Password" type="password" tabindex="4" required>
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input placeholder="Retype password" id="confirm_password" type="password" tabindex="5" required>
+                        <span id='message' class="text-danger"></span>
+                    </div>
+                    <div class="clearfix"></div>
+
+                    <div class="address submit">
+                        <input type="submit" value="Create">
+                    </div>
+
+            </form>
+
+        </div>
+    </div>
+    <!--register-end-->
+    <script>
+        $('#password, #confirm_password').on('keyup', function () {
+            if ($('#password').val() == $('#confirm_password').val()) {
+                $('#message').html('Matching').css('color', 'green');
+            } else
+                $('#message').html('Not Matching').css('color', 'red');
+        });
+    </script>
+
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }
+

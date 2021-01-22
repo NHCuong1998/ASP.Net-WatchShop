@@ -1,0 +1,14 @@
+﻿{
+  "ConnectionStrings": {
+    "DefaultConnection": "DataSource=app.db"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
+  "ConnectionsStrings": {
+    "ConectSql": "Server=DESKTOP-HRSVS4C;Database=DBWatch;Persist Security Info=True;User ID=sa;Password=BreakCase1998;MultipleActiveResultSets=True;"
+  }
+}

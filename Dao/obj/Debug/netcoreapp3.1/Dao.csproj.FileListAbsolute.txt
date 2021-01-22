@@ -1,0 +1,24 @@
+/Users/phongnd/Projects/LuxuryWatchs/Dao/obj/Debug/netcoreapp3.1/Dao.csprojAssemblyReference.cache
+/Users/phongnd/Projects/LuxuryWatchs/Dao/obj/Debug/netcoreapp3.1/Dao.AssemblyInfoInputs.cache
+/Users/phongnd/Projects/LuxuryWatchs/Dao/obj/Debug/netcoreapp3.1/Dao.AssemblyInfo.cs
+/Users/phongnd/Projects/LuxuryWatchs/Dao/obj/Debug/netcoreapp3.1/Dao.csproj.CoreCompileInputs.cache
+/Users/phongnd/Projects/LuxuryWatchs/Dao/bin/Debug/netcoreapp3.1/Dao.deps.json
+/Users/phongnd/Projects/LuxuryWatchs/Dao/bin/Debug/netcoreapp3.1/Dao.runtimeconfig.json
+/Users/phongnd/Projects/LuxuryWatchs/Dao/bin/Debug/netcoreapp3.1/Dao.runtimeconfig.dev.json
+/Users/phongnd/Projects/LuxuryWatchs/Dao/bin/Debug/netcoreapp3.1/Dao.dll
+/Users/phongnd/Projects/LuxuryWatchs/Dao/bin/Debug/netcoreapp3.1/Dao.pdb
+/Users/phongnd/Projects/LuxuryWatchs/Dao/obj/Debug/netcoreapp3.1/Dao.dll
+/Users/phongnd/Projects/LuxuryWatchs/Dao/obj/Debug/netcoreapp3.1/Dao.pdb
+/Users/phongnd/Projects/LuxuryWatchs/Dao/obj/Debug/netcoreapp3.1/Dao.genruntimeconfig.cache
+C:\Users\ngohu\OneDrive\Desktop\Clone-Git\ASP.Net 11-1\LuxuryWatchs\Dao\bin\Debug\netcoreapp3.1\Dao.deps.json
+C:\Users\ngohu\OneDrive\Desktop\Clone-Git\ASP.Net 11-1\LuxuryWatchs\Dao\bin\Debug\netcoreapp3.1\Dao.runtimeconfig.json
+C:\Users\ngohu\OneDrive\Desktop\Clone-Git\ASP.Net 11-1\LuxuryWatchs\Dao\bin\Debug\netcoreapp3.1\Dao.runtimeconfig.dev.json
+C:\Users\ngohu\OneDrive\Desktop\Clone-Git\ASP.Net 11-1\LuxuryWatchs\Dao\bin\Debug\netcoreapp3.1\Dao.dll
+C:\Users\ngohu\OneDrive\Desktop\Clone-Git\ASP.Net 11-1\LuxuryWatchs\Dao\bin\Debug\netcoreapp3.1\Dao.pdb
+C:\Users\ngohu\OneDrive\Desktop\Clone-Git\ASP.Net 11-1\LuxuryWatchs\Dao\obj\Debug\netcoreapp3.1\Dao.AssemblyInfoInputs.cache
+C:\Users\ngohu\OneDrive\Desktop\Clone-Git\ASP.Net 11-1\LuxuryWatchs\Dao\obj\Debug\netcoreapp3.1\Dao.AssemblyInfo.cs
+C:\Users\ngohu\OneDrive\Desktop\Clone-Git\ASP.Net 11-1\LuxuryWatchs\Dao\obj\Debug\netcoreapp3.1\Dao.csproj.CoreCompileInputs.cache
+C:\Users\ngohu\OneDrive\Desktop\Clone-Git\ASP.Net 11-1\LuxuryWatchs\Dao\obj\Debug\netcoreapp3.1\Dao.dll
+C:\Users\ngohu\OneDrive\Desktop\Clone-Git\ASP.Net 11-1\LuxuryWatchs\Dao\obj\Debug\netcoreapp3.1\Dao.pdb
+C:\Users\ngohu\OneDrive\Desktop\Clone-Git\ASP.Net 11-1\LuxuryWatchs\Dao\obj\Debug\netcoreapp3.1\Dao.genruntimeconfig.cache
+C:\Users\ngohu\OneDrive\Desktop\Clone-Git\ASP.Net 11-1\LuxuryWatchs\Dao\obj\Debug\netcoreapp3.1\Dao.csprojAssemblyReference.cache

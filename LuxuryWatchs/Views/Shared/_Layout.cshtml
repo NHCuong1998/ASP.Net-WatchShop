@@ -1,0 +1,235 @@
+﻿@model Dao.Models.UserModel
+@{
+    var userID = "";
+    if (ViewBag.Users != null)
+    {
+        @foreach (var item in ViewBag.Users)
+        {
+            userID = item.UserID;
+        }
+
+    }
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Luxury Watches</title>
+    <link href="~/libClient/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <!--jQuery(necessary for Bootstrap's JavaScript plugins)-->
+    <script src="~/libClient/js/jquery-1.11.0.min.js"></script>
+    <!--Custom-Theme-files-->
+    <!--theme-style-->
+    <link href="~/libClient/css/style.css" rel="stylesheet" />
+    <!--//theme-style-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Luxury Watches" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!--start-menu-->
+    <script src="~/libClient/js/simpleCart.min.js"></script>
+    <link href="~/libClient/css/memenu.css" rel="stylesheet" type="text/css" media="all" />
+    <script type="text/javascript" src="~/libClient/js/memenu.js"></script>
+    <script>$(document).ready(function () { $(".memenu").memenu(); });</script>
+    <!--dropdown-->
+    <script src="js/jquery.easydropdown.js"></script>
+
+</head>
+<body>
+    <header>
+        @if (ViewBag.Users != null)
+        {
+            @foreach (var item in ViewBag.Users)
+            {
+                <input type="hidden" asp-for="UserID" value="@item.UserID" />
+                userID = item.UserID;
+            }
+
+        }
+
+        <!--top-header-->
+        <div class="top-header">
+            <div class="container">
+                <div class="top-header-main">
+                    <!--start-logo-->
+                    <div class="logo">
+                        <a asp-area="" asp-controller="Home" asp-action="Index">
+                            <img style="width:70px;  margin-top: -20px;" src="~/libClient/images/logo-web.jpg" />
+                            <h1> Luxury Watches</h1>
+                        </a>
+                    </div>
+                    <!--start-logo-->
+
+                </div>
+            </div>
+        </div>
+        <!--top-header-->
+        <!--bottom-header-->
+        <div class="header-bottom1">
+            <div class="container">
+                <div class="header">
+                    <div class="col-md-8 header-left">
+                        <div class="top-nav">
+                            <ul class="memenu skyblue">
+                                <li class="grid">
+                                    <a asp-route-id="" asp-controller="Home" asp-action="Index">Home</a>
+                                </li>
+
+                                <li class="grid">
+                                    <a asp-route-id="" asp-controller="Product" asp-action="Index">Trademark</a>
+                                    <div class="mepanel">
+                                        <div class="row">
+                                            <div class="col1 me-one">
+                                                <ul>
+                                                    <li><a asp-route-UserID="@userID" asp-route-id="6b4752fb-fbd5-4927-876a-ae37e972f08b" asp-controller="Product" asp-action="Index">Seiko</a></li>
+                                                    <li><a asp-route-UserID="@userID" asp-route-id="11654e42-65b5-4ea1-9add-7e96e729475e" asp-controller="Product" asp-action="Index">Omega</a></li>
+                                                    <li><a asp-route-UserID="@userID" asp-route-id="6f4a71c1-88d7-4097-b5e2-d636e0efb7b3" asp-controller="Product" asp-action="Index">Rolex</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col1 me-one">
+                                                <ul>
+                                                    <li><a asp-route-UserID="@userID" asp-route-id="73c6a3c9-2947-4922-aa9e-c35fed6ba1b3" asp-controller="Product" asp-action="Index">Cartier</a></li>
+                                                    <li><a asp-route-UserID="@userID" asp-route-id="38b04ca0-c9a8-4b50-a862-91562cdd0f70" asp-controller="Product" asp-action="Index">Patek Philippe</a></li>
+                                                    <li><a asp-route-UserID="@userID" asp-route-id="a29dec77-ac73-465d-b566-5df1f2d0a3f2" asp-controller="Product" asp-action="Index">Montblanc</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col1 me-one">
+                                                <ul>
+                                                    <li><a asp-route-UserID="@userID" asp-route-id="4eb2d6ea-6fa9-4abf-ad64-668e975490ff" asp-controller="Product" asp-action="Index">Citizen</a></li>
+                                                    <li><a asp-route-UserID="@userID" asp-route-id="38cfde89-8961-4c1b-8b1a-87b84a3cb616" asp-controller="Product" asp-action="Index">Bentley</a></li>
+                                                    <li><a asp-route-UserID="@userID" asp-route-id="390e16ef-9034-47bb-8a7e-e47ff37f7968" asp-controller="Product" asp-action="Index">Casio</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+
+                                <li class="grid">
+                                    <a asp-route-UserID="@userID" asp-route-gender="Men" asp-controller="Product" asp-action="IndexListGender">Men</a>
+                                </li>
+                                <li class="grid">
+                                    <a asp-route-UserID="@userID" asp-route-gender="Women" asp-controller="Product" asp-action="IndexListGender">Women</a>
+                                </li>
+                                <li class="grid">
+                                    <a asp-route-UserID="@userID" asp-area="" asp-controller="Contact" asp-action="Index">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="col-md-2">
+                        <!-- Star Cart-->
+                        <div class="cart box_1">
+                            <a asp-route-UserID="@userID" asp-controller="User" asp-action="Index">
+                                <div class="total" style="color:black;">
+                                    <span class="simpleCart_total"></span>
+                                </div>
+                                <img src="~/libClient/images/cart-2.png" alt="" />
+                            </a>
+                            <p><a asp-route-UserID="@userID" asp-controller="Cart" asp-action="Index" class="simpleCart_empty" style="color:black;">Empty Cart</a></p>
+
+
+                            <div class="clearfix"> </div>
+                        </div>
+
+                        <!-- End Cart Cart-->
+                    </div>
+
+
+                    <div class="col-md-2 header-right">
+
+                        <div class="search-bar" style="margin:5px;">
+                            @if (ViewBag.Users != null)
+                            {
+                                <a asp-route-UserID="@userID" asp-controller="Home" asp-action="Index"><h4>LogOut</h4></a>
+                            }
+                            else
+                            {
+                                <a asp-route-UserID="@userID" asp-controller="User" asp-action="Index"><h4>Login</h4></a>
+                            }
+
+                            @*<input type="text" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
+        <input type="submit" value="">*@
+                        </div>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+        </div>
+        <!--bottom-header-->
+        <!--about-starts-->
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="information">
+            <div class="container">
+                <div class="infor-top">
+                    <div class="col-md-3 infor-left">
+                        <h3>Follow Us</h3>
+                        <ul>
+                            <li><a href="#"><span class="fb"></span><h6>Facebook</h6></a></li>
+                            <li><a href="#"><span class="twit"></span><h6>Twitter</h6></a></li>
+                            <li><a href="#"><span class="google"></span><h6>Google+</h6></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 infor-left">
+                        <h3>Information</h3>
+                        <ul>
+                            <li><a href="#"><p>Specials</p></a></li>
+                            <li><a href="#"><p>New Products</p></a></li>
+                            <li><a href="#"><p>Our Stores</p></a></li>
+                            <li><a href="contact.html"><p>Contact Us</p></a></li>
+                            <li><a href="#"><p>Top Sellers</p></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 infor-left">
+                        <h3>My Account</h3>
+                        <ul>
+                            <li><a asp-route-UserID="@userID" asp-controller="User" asp-action="Index"><p>My Account</p></a></li>
+                            <li><a href="#"><p>My Credit slips</p></a></li>
+                            <li><a href="#"><p>My Merchandise returns</p></a></li>
+                            <li><a href="#"><p>My Personal info</p></a></li>
+                            <li><a href="#"><p>My Addresses</p></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 infor-left">
+                        <h3>Store Information</h3>
+                        <h4>
+                            The company name,
+                            <span>Lorem ipsum dolor,</span>
+                            Glasglow Dr 40 Fe 72.
+                        </h4>
+                        <h5>+955 123 4567</h5>
+                        <p><a href="mailto:example@email.com">contact@example.com</a></p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+        <!--information-end-->
+        <!--footer-starts-->
+        <div class="footer">
+            <div class="container">
+                <div class="footer-top">
+                    <div class="col-md-6 footer-left">
+                        <form>
+                            <input type="text" value="Enter Your Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter Your Email';}">
+                            <input type="submit" value="Subscribe">
+                        </form>
+                    </div>
+                    <div class="col-md-6 footer-right">
+                        <p>© 2015 Luxury Watches. All Rights Reserved | Design by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
